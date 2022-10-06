@@ -17,20 +17,38 @@ import { BsTwitter } from 'react-icons/bs';
 
 const Sidebar = () => {
 	return (
-		<div className='flex flex-col col-span-2 items-center md:items-start'>
+		<div className='absolute w-full bottom-0 border-t sm:border-0 justify-between sm:relative flex sm:flex-col col-span-2 items-center md:items-start pr-5'>
 			{/* Logo for Fluita */}
-			<BsTwitter size={23} className='text-mainCol m-3' />
+			<div className='hidden sm:inline-flex'>
+				<BsTwitter size={23} className='text-mainCol m-3' />
+			</div>
 
 			{/* Icon and text for the rows on the sidebar */}
 			{/* TODO: Add icons as props when they are installed */}
 			<SideIconAndText Icon={HomeIcon} title='Home' />
-			<SideIconAndText Icon={HashtagIcon} title='Explore' />
+			<div className='hidden sm:inline-flex'>
+				<SideIconAndText Icon={HashtagIcon} title='Explore' />
+			</div>
 			<SideIconAndText Icon={MagnifyingGlassIcon} title='Search' />
-			<SideIconAndText Icon={UserIcon} title='Profile' />
+			<div className='hidden sm:inline-flex'>
+				<SideIconAndText Icon={UserIcon} title='Profile' />
+			</div>
 			<SideIconAndText Icon={BellIcon} title='Notification' />
 			<SideIconAndText Icon={EnvelopeIcon} title='Messages' />
-			<SideIconAndText Icon={CogIcon} title='Settings' />
-			<SideIconAndText Icon={EllipsisHorizontalCircleIcon} title='More' />
+			<div className='hidden sm:inline-flex'>
+				<SideIconAndText Icon={CogIcon} title='Settings' />
+			</div>
+			<div className='hidden sm:inline-flex'>
+				<SideIconAndText Icon={EllipsisHorizontalCircleIcon} title='More' />
+			</div>
+
+			{/* Tweet button */}
+			<button
+				type='submit'
+				className='hidden sm:inline-flex items-center justify-center p-4 rounded-full text-white bg-mainCol font-bold w-full text-lg tracking-wider'
+			>
+				Tweet
+			</button>
 		</div>
 	);
 };
