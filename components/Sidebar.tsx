@@ -17,9 +17,9 @@ import { BsTwitter } from 'react-icons/bs';
 
 const Sidebar = () => {
 	return (
-		<div className='flex flex-col'>
+		<div className='flex flex-col col-span-2 items-center md:items-start'>
 			{/* Logo for Fluita */}
-			<BsTwitter size={30} className='text-mainCol' />
+			<BsTwitter size={23} className='text-mainCol m-3' />
 
 			{/* Icon and text for the rows on the sidebar */}
 			{/* TODO: Add icons as props when they are installed */}
