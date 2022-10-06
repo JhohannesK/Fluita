@@ -7,9 +7,11 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.11",
+    "framer-motion": "^7.5.2",
     "next": "latest",
     "react": "18.1.0",
     "react-dom": "18.1.0",
+    "react-icons": "^4.4.0",
     "react-twitter-embed": "^4.0.4"
   },
   "devDependencies": {
