@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const Feed = () => {
 	return (
-		<div className='col-span-9 sm:col-span-7 lg:col-span-5 border-x px-5'>
+		<div className='col-span-9 xs:col-span-7 lg:col-span-5 border-x px-5'>
 			<div className='flex items-center justify-between mt-5'>
 				<div className='flex items-center space-x-4'>
 					<div className='h-10 w-10 sm:hidden inline-block rounded-full'>

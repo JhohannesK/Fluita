@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
 import SideIconAndText from './_sideIcon';
-// HACK: Install @types/heroicons/react
 import {
 	BellIcon,
 	HashtagIcon,
@@ -17,35 +16,34 @@ import { BsTwitter } from 'react-icons/bs';
 
 const Sidebar = () => {
 	return (
-		<div className='absolute w-full bottom-0 border-t sm:border-0 justify-between sm:relative flex sm:flex-col col-span-2 items-center md:items-start pr-5'>
+		<div className='absolute w-full px-10 bottom-0 border-t xs:border-0 justify-between xs:relative flex xs:flex-col col-span-2 items-center md:items-start xs:px-5'>
 			{/* Logo for Fluita */}
-			<div className='hidden sm:inline-flex'>
+			<div className='hidden xs:inline-flex'>
 				<BsTwitter size={23} className='text-mainCol m-3' />
 			</div>
 
 			{/* Icon and text for the rows on the sidebar */}
-			{/* TODO: Add icons as props when they are installed */}
 			<SideIconAndText Icon={HomeIcon} title='Home' />
-			<div className='hidden sm:inline-flex'>
+			<div className='hidden xs:inline-flex'>
 				<SideIconAndText Icon={HashtagIcon} title='Explore' />
 			</div>
 			<SideIconAndText Icon={MagnifyingGlassIcon} title='Search' />
-			<div className='hidden sm:inline-flex'>
+			<div className='hidden xs:inline-flex'>
 				<SideIconAndText Icon={UserIcon} title='Profile' />
 			</div>
 			<SideIconAndText Icon={BellIcon} title='Notification' />
 			<SideIconAndText Icon={EnvelopeIcon} title='Messages' />
-			<div className='hidden sm:inline-flex'>
+			<div className='hidden xs:inline-flex'>
 				<SideIconAndText Icon={CogIcon} title='Settings' />
 			</div>
-			<div className='hidden sm:inline-flex'>
+			<div className='hidden xs:inline-flex'>
 				<SideIconAndText Icon={EllipsisHorizontalCircleIcon} title='More' />
 			</div>
 
 			{/* Tweet button */}
 			<button
 				type='submit'
-				className='hidden sm:inline-flex items-center justify-center p-4 rounded-full text-white bg-mainCol font-bold w-full text-lg tracking-wider'
+				className='hidden xs:inline-flex items-center justify-center p-4 rounded-full text-white bg-mainCol font-bold w-full text-lg tracking-wider'
 			>
 				Tweet
 			</button>

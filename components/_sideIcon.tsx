@@ -1,7 +1,6 @@
 import React, { SVGProps } from 'react';
 
 interface Props {
-	// TODO: Remove optional props when icons are made available.
 	Icon: (props: SVGProps<SVGSVGElement>) => JSX.Element;
 	title: string;
 }
