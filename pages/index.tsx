@@ -7,7 +7,7 @@ import Widgets from '../components/Widgets';
 
 const Home: NextPage = () => {
 	return (
-		<div className='lg:max-w-6xl mx-auto max-h-screen overflow-hidden md:pl-5 lg:pr-5'>
+		<div className='xl:max-w-7xl mx-auto max-h-screen overflow-hidden md:pl-5 lg:pr-5'>
 			<Head>
 				<title>Fluita</title>
 				<link rel='icon' href='/favicon.ico' />

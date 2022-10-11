@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "seashell-chamois"
+    "name": "tan-rabbit"
   },
   "api": {
-    "projectId": "jfyy7qs2",
+    "projectId": "feiffmon",
     "dataset": "production"
   },
   "plugins": [
