@@ -43,7 +43,7 @@ const Sidebar = () => {
 			{/* Tweet button */}
 			<button
 				type='submit'
-				className='hidden xs:inline-flex items-center justify-center p-4 rounded-full text-white bg-mainCol font-bold w-full text-lg tracking-wider'
+				className='hidden mt-5 xs:inline-flex items-center justify-center p-4 rounded-full text-white bg-mainCol font-bold w-full text-lg tracking-wider'
 			>
 				Tweet
 			</button>
