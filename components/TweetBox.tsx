@@ -39,12 +39,12 @@ const TweetBox = () => {
 					<div className='flex items-center'>
 						{/* Icons */}
 						<div className='flex items-center space-x-2 flex-1'>
-							<PhotoIcon className='h-10 rounded-full cursor-pointer hover:scale-150 transition duration-500 ease-linear w-10 text-mainCol hover:bg-gray-100 p-2' />
-							<GifIcon className='h-10 rounded-full cursor-pointer hover:scale-150 transition duration-500 ease-linear w-10 text-mainCol hover:bg-gray-100 p-2' />
-							<ChartBarIcon className='h-10 rounded-full cursor-pointer hover:scale-150 transition duration-500 ease-linear w-10 text-mainCol hover:bg-gray-100 p-2' />
-							<FaceSmileIcon className='h-10 rounded-full cursor-pointer hover:scale-150 transition duration-500 ease-linear w-10 text-mainCol hover:bg-gray-100 p-2' />
-							<CalendarDaysIcon className='h-10 rounded-full cursor-pointer hover:scale-150 transition duration-500 ease-linear w-10 text-mainCol hover:bg-gray-100 p-2' />
-							<MapPinIcon className='h-10 rounded-full cursor-pointer hover:scale-150 transition duration-500 ease-linear w-10 text-mainCol hover:bg-gray-100 p-2' />
+							<PhotoIcon className='h-10 rounded-full cursor-pointer hover:scale-150 transition duration-500 ease-linear w-9 text-mainCol hover:bg-gray-100 p-2' />
+							<GifIcon className='h-10 rounded-full cursor-pointer hover:scale-150 transition duration-500 ease-linear w-9 text-mainCol hover:bg-gray-100 p-2' />
+							<ChartBarIcon className='h-10 rounded-full cursor-pointer hover:scale-150 transition duration-500 ease-linear w-9 text-mainCol hover:bg-gray-100 p-2' />
+							<FaceSmileIcon className='h-10 rounded-full cursor-pointer hover:scale-150 transition duration-500 ease-linear w-9 text-mainCol hover:bg-gray-100 p-2' />
+							<CalendarDaysIcon className='h-10 rounded-full cursor-pointer hover:scale-150 transition duration-500 ease-linear w-9 text-mainCol hover:bg-gray-100 p-2' />
+							<MapPinIcon className='h-10 rounded-full cursor-pointer hover:scale-150 transition duration-500 ease-linear w-9 text-mainCol hover:bg-gray-100 p-2' />
 						</div>
 						{/* Tweet button */}
 						<button
