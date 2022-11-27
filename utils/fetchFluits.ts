@@ -11,4 +11,5 @@ export const fetchFluits = async () => {
 		.catch((err) => {
 			console.log(err);
 		});
+	console.log('🚀 ~ file: fetchFluits.ts:14 ~ fetchFluits ~ data', data);
 };
