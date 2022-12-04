@@ -11,8 +11,12 @@ const query = groq`
         fluitText,
         blockFluit,
         username,
-        fluitImage,
-        profileImage
+        fluitImage {
+            "url": asset->.url
+        },
+        profileImage {
+            "url": asset->.url
+        }
     }`;
 
 type Data = {

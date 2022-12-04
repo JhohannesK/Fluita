@@ -22,6 +22,10 @@ export interface IProps {
 	fluitText: string;
 	blockFluit: boolean;
 	username: string;
-	fluitImage: string;
-	profileImage: string;
+	fluitImage: {
+		url: string;
+	};
+	profileImage: {
+		url: string;
+	};
 }
