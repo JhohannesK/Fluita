@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.icon {
+	@apply text-gray-500 h-5 w-5 cursor-pointer transition-all duration-200;
+}
+
+.tweetIcons {
+	@apply flex items-center space-x-2 text-gray-500 transition-all duration-500 cursor-pointer;
+}
+
+.tweetText {
+	@apply text-sm transition-all duration-200;
+}

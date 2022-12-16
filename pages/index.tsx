@@ -1,30 +1,24 @@
 import axios from 'axios';
 import type { GetServerSideProps, NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import Feed from '../components/feedDisplay/Feed';
 import Sidebar from '../components/sidebar/Sidebar';
 import Widgets from '../components/Widgets';
-import { fetchFluits } from '../utils/fetchFluits';
 import { IProps } from '../_types';
 
 const Home: NextPage = ({ res }: Record<string, IProps[]>) => {
-	console.log('🚀 ~ file: index.tsx:12 ~ res', res);
 	return (
-		<div className='xl:max-w-7xl mx-auto max-h-screen overflow-hidden md:pl-5 lg:pr-5'>
+		<div className='xl:max-w-7xl mx-auto max-h-screen md:pl-5 lg:pr-5 dark:bg-black dark:text-white transition-all duration:500'>
 			<Head>
 				<title>Fluita</title>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
 			<main className='grid grid-cols-9'>
-				{/* sidebar */}
 				<Sidebar />
 
-				{/* Feeds */}
 				<Feed fluitafeed={res} />
 
-				{/* Widgets */}
 				<Widgets />
 			</main>
 		</div>

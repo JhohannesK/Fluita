@@ -2,15 +2,19 @@ import React from 'react';
 import Image from 'next/image';
 import { IProps } from '../../_types';
 import ReactTimeago from 'react-timeago';
+import { ChatBubbleOvalLeftIcon, HeartIcon } from '@heroicons/react/24/outline';
+import { AiOutlineRetweet } from 'react-icons/ai';
+import { FiShare } from 'react-icons/fi';
+import { TbCircleTriangle } from 'react-icons/tb';
 
-const Timeline: React.FC<Record<string, IProps[]>> = ({ timeline }) => {
+const Timeline: React.FC<Record<string, IProps>> = ({ timeline }) => {
 	return (
 		<div className='flex w-full mt-3 space-x-5'>
 			{/* Pfp */}
 			<div className='h-full flex items-start justify-start'>
 				<div className='h-14 w-14'>
 					<Image
-						src={timeline[0].profileImage.url}
+						src={timeline.profileImage.url}
 						width={'100%'}
 						height={'100%'}
 						alt='profile picture'
@@ -21,17 +25,17 @@ const Timeline: React.FC<Record<string, IProps[]>> = ({ timeline }) => {
 			<div className='w-full'>
 				<div className='flex items-center justify-between w-full'>
 					<div className='flex items-center text-[15px] space-x-1'>
-						<p className='font-bold'>{timeline[0].username}</p>
+						<p className='font-bold'>{timeline.username}</p>
 						<p className='font-light text-gray-600'>
-							@{timeline[0].username.replace('', '_')}
+							@{timeline.username.replace('', '_')}
 						</p>
 						<span>·</span>
 						<ReactTimeago
 							className='font-light text-gray-600'
-							date={timeline[0]._createdAt}
+							date={timeline._createdAt}
 							formatter={(value, unit) => {
 								if (unit === 'second') {
-									return 'Just now';
+									return value + 's';
 								} else if (unit === 'minute') {
 									return value + 'm';
 								} else if (unit === 'hour') {
@@ -54,16 +58,37 @@ const Timeline: React.FC<Record<string, IProps[]>> = ({ timeline }) => {
 						</p>
 					</div>
 				</div>
-				<div>{timeline[0].fluitText}</div>
+				<div>{timeline.fluitText}</div>
 				<div className='mt-1'>
-					{timeline[0].fluitImage && (
+					{timeline.fluitImage && (
 						<div className=' w-full'>
 							<img
-								src={timeline[0].fluitImage.url}
+								src={timeline.fluitImage.url}
 								className='w-full h-full rounded-3xl object-cover'
 							/>
 						</div>
 					)}
+				</div>
+				<div className='flex items-center justify-between pt-2'>
+					<div className='tweetIcons group'>
+						<ChatBubbleOvalLeftIcon className='icon group-hover:text-blue-500' />
+						<p className='tweetText group-hover:text-blue-500'>34</p>
+					</div>
+					<div className='tweetIcons group '>
+						<AiOutlineRetweet className='icon group-hover:text-green-500' />
+						<p className='tweetText group-hover:text-green-500'>402</p>
+					</div>
+					<div className='tweetIcons group'>
+						<HeartIcon className='icon group-hover:text-red-500' />
+						<p className='tweetText group-hover:text-red-500'>1.2k</p>
+					</div>
+					<div className='tweetIcons'>
+						<FiShare className='icon' />
+					</div>
+					<div className='hidden tweetIcons xs:inline-flex'>
+						<TbCircleTriangle className='icon' />
+						<p>Tip</p>
+					</div>
 				</div>
 			</div>
 		</div>

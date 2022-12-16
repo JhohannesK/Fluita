@@ -13,10 +13,12 @@ import {
 	EllipsisHorizontalCircleIcon,
 } from '@heroicons/react/24/outline';
 import { BsTwitter } from 'react-icons/bs';
+import { signIn, signOut, useSession } from 'next-auth/react';
 
 const Sidebar = () => {
+	const { data: session } = useSession();
 	return (
-		<div className='absolute w-full px-10 bottom-0 border-t xs:border-0 justify-between xs:relative flex xs:flex-col col-span-2 items-center md:items-start xs:px-5'>
+		<div className='absolute w-full sm:px-10 bottom-0 border-t xs:border-0 gap-3 xs:relative flex xs:flex-col col-span-2 items-center md:items-start xs:px-5'>
 			{/* Logo for Fluita */}
 			<div className='hidden xs:inline-flex'>
 				<BsTwitter size={23} className='text-mainCol m-3' />
@@ -34,7 +36,10 @@ const Sidebar = () => {
 			<SideIconAndText Icon={BellIcon} title='Notification' />
 			<SideIconAndText Icon={EnvelopeIcon} title='Messages' />
 			<div className='hidden xs:inline-flex'>
-				<SideIconAndText Icon={CogIcon} title='Settings' />
+				<SideIconAndText
+					Icon={CogIcon}
+					title={session ? 'Sign Out' : 'Sign In'}
+				/>
 			</div>
 			<div className='hidden xs:inline-flex'>
 				<SideIconAndText Icon={EllipsisHorizontalCircleIcon} title='More' />

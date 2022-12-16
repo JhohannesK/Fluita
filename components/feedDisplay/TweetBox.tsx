@@ -15,7 +15,7 @@ const TweetBox = () => {
 	const [input, setInput] = useState<string>('');
 
 	return (
-		<div className='hidden sm:flex space-x-2 mt-3'>
+		<div className='hidden sm:flex space-x-2 mt-3 pb-4 border-b-2'>
 			<div className='h-10 w-10 rounded-full mt-4'>
 				<Image
 					src='/images/insta.png'
