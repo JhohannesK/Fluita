@@ -8,18 +8,22 @@ import { IProps } from '../_types';
 
 const Home: NextPage = ({ res }: Record<string, IProps[]>) => {
 	return (
-		<div className='xl:max-w-7xl mx-auto max-h-screen md:pl-5 lg:pr-5 dark:bg-black dark:text-white transition-all duration:500'>
+		<div className=' max-h-screen mx-auto xl:max-w-7xl md:pl-5 lg:pr-5 dark:bg-black dark:text-white transition-all duration:500'>
 			<Head>
 				<title>Fluita</title>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<main className='grid grid-cols-9'>
-				<Sidebar />
+			<main className='flex'>
+				<div className='w-[40%] overscroll-none relative'>
+					<Sidebar />
+				</div>
 
-				<Feed fluitafeed={res} />
+				<div className='flex overflow-y-auto  '>
+					<Feed fluitafeed={res} />
 
-				<Widgets />
+					<Widgets />
+				</div>
 			</main>
 		</div>
 	);

@@ -13,3 +13,7 @@
 .tweetText {
 	@apply text-sm transition-all duration-200;
 }
+
+body {
+	background-color: black;
+}

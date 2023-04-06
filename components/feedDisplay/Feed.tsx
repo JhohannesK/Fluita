@@ -6,9 +6,12 @@ import Timeline from './Timeline';
 
 const Feed: React.FC<Record<string, IProps[]>> = ({ fluitafeed }) => {
 	return (
-		<div className='col-span-9 xs:col-span-6 lg:col-span-4 overflow-y border-x px-5'>
+		<div className='w-[70%] h-full border-x px-5'>
 			<FeedHeader />
 			<TweetBox />
+			{fluitafeed.map((fluita) => (
+				<Timeline timeline={fluita} />
+			))}
 			{fluitafeed.map((fluita) => (
 				<Timeline timeline={fluita} />
 			))}

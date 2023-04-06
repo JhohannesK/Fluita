@@ -4,7 +4,7 @@ import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 const Widgets = () => {
 	return (
-		<div className='px-2 mt-2 lg:inline col-span-3 hidden'>
+		<div className='px-2 mt-2 lg:inline w-[350px] hidden h-screen overflow-y-auto'>
 			<div className='flex space-x-2 items-center bg-gray-100 p-3 rounded-full my-2 '>
 				<MagnifyingGlassIcon className='h-5 w-5 text-gray-400' />
 				<input
@@ -13,6 +13,31 @@ const Widgets = () => {
 					className='bg-transparent flex-1 outline-none'
 				/>
 			</div>
+			<TwitterTimelineEmbed
+				sourceType='profile'
+				screenName='_jhohannes'
+				options={{ height: 400 }}
+			/>
+			<TwitterTimelineEmbed
+				sourceType='profile'
+				screenName='_jhohannes'
+				options={{ height: 400 }}
+			/>
+			<TwitterTimelineEmbed
+				sourceType='profile'
+				screenName='_jhohannes'
+				options={{ height: 400 }}
+			/>
+			<TwitterTimelineEmbed
+				sourceType='profile'
+				screenName='_jhohannes'
+				options={{ height: 400 }}
+			/>
+			<TwitterTimelineEmbed
+				sourceType='profile'
+				screenName='_jhohannes'
+				options={{ height: 400 }}
+			/>
 			<TwitterTimelineEmbed
 				sourceType='profile'
 				screenName='_jhohannes'
