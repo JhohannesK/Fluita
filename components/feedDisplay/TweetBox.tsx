@@ -26,7 +26,7 @@ const TweetBox = () => {
 				/>
 			</div>
 
-			<div className='flex flex-1 items-center pl-2'>
+			<div className='flex flex-1 items-center pl-2 '>
 				<form action='' className='flex flex-1 flex-col space-y-2'>
 					{/* Input text field to type in tweet */}
 					<input
@@ -34,7 +34,7 @@ const TweetBox = () => {
 						onChange={(e) => setInput(e.target.value)}
 						type='text'
 						placeholder="What's happening?!"
-						className='h-20 placeholder:text-xl outline-none'
+						className='h-20 placeholder:text-xl outline-none dark:bg-black'
 					/>
 					<div className='flex items-center'>
 						{/* Icons */}
