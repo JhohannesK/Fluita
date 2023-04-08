@@ -18,31 +18,6 @@ const Widgets = () => {
 				screenName='_jhohannes'
 				options={{ height: 400 }}
 			/>
-			<TwitterTimelineEmbed
-				sourceType='profile'
-				screenName='_jhohannes'
-				options={{ height: 400 }}
-			/>
-			<TwitterTimelineEmbed
-				sourceType='profile'
-				screenName='_jhohannes'
-				options={{ height: 400 }}
-			/>
-			<TwitterTimelineEmbed
-				sourceType='profile'
-				screenName='_jhohannes'
-				options={{ height: 400 }}
-			/>
-			<TwitterTimelineEmbed
-				sourceType='profile'
-				screenName='_jhohannes'
-				options={{ height: 400 }}
-			/>
-			<TwitterTimelineEmbed
-				sourceType='profile'
-				screenName='_jhohannes'
-				options={{ height: 400 }}
-			/>
 		</div>
 	);
 };
