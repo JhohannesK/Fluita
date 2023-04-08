@@ -39,6 +39,7 @@ const Sidebar = () => {
 				<SideIconAndText
 					Icon={CogIcon}
 					title={session ? 'Sign Out' : 'Sign In'}
+					session={session}
 				/>
 			</div>
 			<div className='hidden xs:inline-flex'>
