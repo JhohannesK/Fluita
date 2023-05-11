@@ -7,12 +7,15 @@ import { AiOutlineRetweet } from 'react-icons/ai';
 import { FiShare } from 'react-icons/fi';
 import { TbCircleTriangle } from 'react-icons/tb';
 
-const Timeline: React.FC<Record<string, IProps>> = ({ timeline }) => {
+const Timeline: React.FC<{ timeline: IProps; index: number }> = ({
+	timeline,
+	index,
+}) => {
 	return (
-		<div className='flex w-full mt-3 space-x-5'>
+		<div className='flex w-full mt-3 space-x-5' key={index}>
 			{/* Pfp */}
 			<div className='h-full flex items-start justify-start'>
-				<div className='h-14 w-14'>
+				<div className='h-14 w-14 rounded-full bg-red-600'>
 					<Image
 						src={timeline.profileImage.url}
 						width={'100%'}

@@ -13,12 +13,12 @@ import {
 	EllipsisHorizontalCircleIcon,
 } from '@heroicons/react/24/outline';
 import { BsTwitter } from 'react-icons/bs';
-import { signIn, signOut, useSession } from 'next-auth/react';
+import { useSession } from 'next-auth/react';
 
 const Sidebar = () => {
 	const { data: session } = useSession();
 	return (
-		<div className='absolute w-full sm:px-10 bottom-0 border-t xs:border-0 gap-3 xs:relative flex xs:flex-col col-span-2 items-center md:items-start xs:px-5'>
+		<div className='absolute max-w-fit sm:px-10 bottom-0 border-t xs:border-0 gap-3 xs:relative flex xs:flex-col col-span-2 items-center md:items-start xs:px-5'>
 			{/* Logo for Fluita */}
 			<div className='hidden xs:inline-flex'>
 				<BsTwitter size={23} className='text-mainCol m-3' />

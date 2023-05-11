@@ -7,22 +7,25 @@ import {
 	PhotoIcon,
 	UserIcon,
 } from '@heroicons/react/24/outline';
+import { useSession } from 'next-auth/react';
 import Image from 'next/image';
 import React from 'react';
 import { useState } from 'react';
 
 const TweetBox = () => {
 	const [input, setInput] = useState<string>('');
+	const { data } = useSession();
 
 	return (
 		<div className='hidden sm:flex space-x-2 mt-3 pb-4 border-b-2'>
 			<div className='h-10 w-10 rounded-full mt-4'>
 				<Image
-					src='/images/insta.png'
+					src={data?.user?.image || '/images/insta.png'}
 					width={'100%'}
 					height={'100%'}
 					alt='profile picture'
-					className='object-contain'
+					className='object-contain rounded-full'
+					aria-describedby='profile picture'
 				/>
 			</div>
 

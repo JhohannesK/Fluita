@@ -2,20 +2,21 @@ import { ArrowPathIcon, MoonIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import React from 'react';
 import { ThemeContext } from '../../ThemeContext';
+import { useSession } from 'next-auth/react';
 
 const FeedHeader = () => {
 	const { currentTheme, changeCurrentTheme } = React.useContext(ThemeContext);
+	const { data } = useSession();
 	return (
 		<div className='flex items-center justify-between mt-5'>
 			<div className='flex items-center space-x-4'>
-				<div className='h-10 w-10 sm:hidden inline-block rounded-full'>
-					{/* TODO: Get user's pfp right here */}
+				<div className='h-10 w-10 sm:hidden inline-block'>
 					<Image
-						src='/images/insta.png'
+						src={data?.user?.image || '/images/insta.png'}
 						width={'100%'}
 						height={'100%'}
 						alt='profile picture'
-						className='object-contain'
+						className='object-contain rounded-full'
 					/>
 				</div>
 

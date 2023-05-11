@@ -17,6 +17,7 @@ export type fluitBody = {
 };
 
 export interface IProps {
+	key: number;
 	_id: string;
 	_createdAt: string;
 	fluitText: string;

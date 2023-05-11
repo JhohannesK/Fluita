@@ -15,11 +15,11 @@ const Home: NextPage = ({ res }: Record<string, IProps[]>) => {
 			</Head>
 
 			<main className='flex'>
-				<div className='w-[40%] overscroll-none relative'>
+				<div className='w-[40%] overscroll-none fixed'>
 					<Sidebar />
 				</div>
 
-				<div className='flex overflow-y-auto  '>
+				<div className='flex overflow-y-auto ml-[17rem] '>
 					<Feed fluitafeed={res} />
 
 					<Widgets />
